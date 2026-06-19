@@ -1181,12 +1181,6 @@ footer{
         <h4>Competitive Programming</h4>
         <p>Technovate'25 — Government College of Technology (GCT)</p>
       </div>
-      <div class="ach-card gold">
-        <span class="ach-medal-big">🥇</span>
-        <div class="ach-rank">First Prize</div>
-        <h4>Fashion Walk Competition</h4>
-        <p>TechFest'25 — Dr. N.G.P. Institute of Technology</p>
-      </div>
     </div>
   </div>
 </section>
@@ -1219,7 +1213,7 @@ footer{
         <div class="edu-year"><span class="edu-year-text">2018 – 2021</span></div>
         <div class="edu-line"><div class="edu-dot"></div></div>
         <div class="edu-body">
-          <h3>Rajeev Gandhi Memorial HSS</h3>
+          <h3>Rajeev Gandhi Memorial High School</h3>
           <div class="deg">SSLC · State Board</div>
           <span class="edu-score-pill">95%</span>
         </div>
@@ -1260,22 +1254,17 @@ footer{
     </div>
   </div>
 </section>
-
-<footer>© 2025 Sreya Shinu · Designed & Built with ❤️</footer>
-
+<footer>© 2026 Sreya Shinu · Designed & Built with ❤️</footer>
 <script>
-// Animated particle canvas background
 const canvas = document.getElementById('bg-canvas');
 const ctx = canvas.getContext('2d');
 let W, H, particles = [];
-
 function resize() {
   W = canvas.width = window.innerWidth;
   H = canvas.height = window.innerHeight;
 }
 resize();
 window.addEventListener('resize', resize);
-
 class Particle {
   constructor() { this.reset(); }
   reset() {
@@ -1299,10 +1288,7 @@ class Particle {
     ctx.fill();
   }
 }
-
 for (let i = 0; i < 120; i++) particles.push(new Particle());
-
-// Draw connection lines
 function drawConnections() {
   for (let i = 0; i < particles.length; i++) {
     for (let j = i + 1; j < particles.length; j++) {
@@ -1329,8 +1315,6 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
-
-// Scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -1339,15 +1323,12 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.proj-card,.cert-card,.ach-card,.info-card,.edu-item').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(24px)';
   el.style.transition = 'opacity .6s ease, transform .6s ease';
   observer.observe(el);
 });
-
-// Theme toggle
 const themeBtn = document.getElementById('themeBtn');
 themeBtn.addEventListener('click', () => {
   document.body.classList.toggle('light');
