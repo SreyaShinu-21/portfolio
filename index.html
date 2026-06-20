@@ -6,55 +6,48 @@
 <title>Sreya Shinu — UI/UX Designer & Developer</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #030308;
-  --surface: #0d0d1a;
-  --surface2: #12122a;
-  --accent: #6c63ff;
-  --accent2: #ff6584;
-  --accent3: #43e97b;
-  --text: #f0f0ff;
-  --muted: #7c7c9e;
-  --border: rgba(108,99,255,0.18);
-  --nav-bg: rgba(3,3,8,0.7);
+:root{
+  --bg:#030308;
+  --surface:#0d0d1a;
+  --surface2:#12122a;
+  --accent:#6c63ff;
+  --accent2:#ff6584;
+  --accent3:#43e97b;
+  --text:#f0f0ff;
+  --muted:#7c7c9e;
+  --border:rgba(108,99,255,0.18);
+  --nav-bg:rgba(3,3,8,0.7);
 }
-body.light {
-  --bg: #f4f4ff;
-  --surface: #ffffff;
-  --surface2: #eeeeff;
-  --text: #0d0d1a;
-  --muted: #5a5a7a;
-  --border: rgba(108,99,255,0.2);
-  --nav-bg: rgba(244,244,255,0.85);
+body.light{
+  --bg:#f4f4ff;
+  --surface:#ffffff;
+  --surface2:#eeeeff;
+  --text:#0d0d1a;
+  --muted:#5a5a7a;
+  --border:rgba(108,99,255,0.2);
+  --nav-bg:rgba(244,244,255,0.85);
 }
 *{
   margin:0;
-  padding:0;
-  box-sizing:border-box;
+  padding:0;box-sizing:border-box;
 }
 html{
   scroll-behavior:smooth;
 }
-body{
-  background:var(--bg);
+body{background:var(--bg);
   color:var(--text);
   font-family:'Inter',sans-serif;
   overflow-x:hidden;
   transition:background .4s,color .4s;
 }
-
-/* CANVAS */
 #bg-canvas{
   position:fixed;
-  top:0;
-  left:0;
+  top:0;left:0;
   width:100%;
   height:100%;
   z-index:0;
   opacity:0.5;
 }
-
-/* NAV */
 nav{
   position:fixed;
   top:0;
@@ -67,8 +60,7 @@ nav{
   align-items:center;
   backdrop-filter:blur(20px);
   background:var(--nav-bg);
-  border-bottom:1px solid var(--border);
-  transition:background .4s;
+  border-bottom:1px solid var(--border);transition:background .4s;
 }
 .theme-toggle{
   width:42px;
@@ -120,22 +112,6 @@ nav ul li a{
 nav ul li a:hover{
   color:var(--text);
 }
-.nav-btn{
-  padding:9px 22px;
-  border-radius:8px;
-  background:var(--accent);
-  color:white;
-  text-decoration:none;
-  font-size:14px;
-  font-weight:600;
-  transition:.3s;
-}
-.nav-btn:hover{
-  opacity:0.85;
-  transform:translateY(-1px);
-}
-
-/* SECTIONS */
 section{
   position:relative;
   z-index:1;
@@ -145,8 +121,6 @@ section{
   margin:auto;
   padding:0 40px;
 }
-
-/* HERO */
 #hero{
   min-height:100vh;
   display:flex;
@@ -294,8 +268,6 @@ h1.big em{
   color:var(--muted);
   letter-spacing:0.3px;
 }
-
-/* ABOUT */
 #about{
   padding:120px 0;
 }
@@ -383,8 +355,6 @@ h2.section-h{
   color:var(--text);
   font-weight:500;
 }
-
-/* SKILLS */
 #skills{
   padding:100px 0;
   background:linear-gradient(180deg,transparent,rgba(108,99,255,0.04),transparent);
@@ -399,8 +369,7 @@ h2.section-h{
 }
 .skill-row{
   display:flex;
-  justify-content:space-between;
-  margin-bottom:8px;
+  justify-content:space-between;margin-bottom:8px;
 }
 .skill-name{
   font-size:14px;
@@ -420,7 +389,8 @@ h2.section-h{
   height:100%;
   border-radius:10px;
   position:relative;
-  transition:width 1s cubic-bezier(.4,0,.2,1);}
+  transition:width 1s cubic-bezier(.4,0,.2,1);
+}
 .skill-bar::after{
   content:'';
   position:absolute;
@@ -446,14 +416,13 @@ h2.section-h{
   font-size:13px;
   color:var(--muted);
   transition:.3s;
-  cursor:default;}
+  cursor:default;
+}
 .tag:hover{
   border-color:var(--accent);
   color:var(--text);
   background:rgba(108,99,255,0.08);
 }
-
-/* PROJECTS */
 #projects{
   padding:100px 0;
 }
@@ -534,8 +503,15 @@ h2.section-h{
   font-family:'Space Grotesk',sans-serif;
   line-height:1;
 }
-
-/* INTERNSHIP */
+.cert-badge{
+  display:inline-block;
+  margin-top:10px;
+  padding:3px 10px;
+  border-radius:4px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:0.5px;
+}
 #internship{
   padding:100px 0;
 }
@@ -602,8 +578,6 @@ h2.section-h{
   color:var(--muted);
   font-weight:500;
 }
-
-/* CERTIFICATIONS */
 #certifications{
   padding:100px 0;
 }
@@ -645,17 +619,6 @@ h2.section-h{
   color:var(--muted);
   line-height:1.6;
 }
-.cert-badge{
-  display:inline-block;
-  margin-top:10px;
-  padding:3px 10px;
-  border-radius:4px;
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:0.5px;
-}
-
-/* ACHIEVEMENTS */
 #achievements{
   padding:100px 0;
 }
@@ -668,7 +631,7 @@ h2.section-h{
   background:var(--surface);
   border:1px solid var(--border);
   border-radius:20px;
-  width: 320px;
+  width:320px;
   padding:36px 28px;
   text-align:center;
   transition:.4s;
@@ -677,7 +640,6 @@ h2.section-h{
 }
 .ach-card:hover{
   transform:translateY(-6px);
-  box-shadow: 0 20px 60px rgba(255,121592,0,0.08);
 }
 .ach-card.gold{
   border-color:rgba(255,215,0,0.25);
@@ -687,6 +649,9 @@ h2.section-h{
 }
 .ach-card.silver{
   border-color:rgba(192,192,192,0.2);
+}
+.ach-card.silver:hover{
+  box-shadow:0 20px 60px rgba(192,192,192,0.08);
 }
 .ach-medal-big{
   font-size:52px;
@@ -700,10 +665,10 @@ h2.section-h{
   text-transform:uppercase;
   margin-bottom:10px;
 }
-.ach-card.gold.ach-rank{
+.ach-card.gold .ach-rank{
   color:#ffd700;
 }
-.ach-card.silver.ach-rank{
+.ach-card.silver .ach-rank{
   color:#aaa;
 }
 .ach-card h4{
@@ -717,8 +682,6 @@ h2.section-h{
   color:var(--muted);
   line-height:1.6;
 }
-
-/* EDUCATION */
 #education{
   padding:100px 0;
 }
@@ -751,7 +714,8 @@ h2.section-h{
 }
 .edu-dot{
   position:absolute;
-  top:8px;left:50%;
+  top:8px;
+  left:50%;
   transform:translateX(-50%);
   width:10px;
   height:10px;
@@ -784,8 +748,6 @@ h2.section-h{
   color:#43e97b;
   border:1px solid rgba(67,233,123,0.2);
 }
-
-/* CONTACT */
 #contact{
   padding:120px 0;
 }
@@ -837,8 +799,6 @@ h2.section-h{
   word-break:break-all;
   line-height:1.5;
 }
-
-/* FOOTER */
 footer{
   border-top:1px solid var(--border);
   padding:30px 40px;
@@ -846,19 +806,23 @@ footer{
   color:var(--muted);
   font-size:13px;
 }
-
-/* ANIMATIONS */
-@keyframes spin{
-  to{transform:rotate(360deg);}
-}
 @keyframes fadeUp{
-  from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}
+  from{opacity:0;transform:translateY(30px);}
+  to{opacity:1;transform:translateY(0);}
 }
-@keyframes pulse{
-  0%,100%{opacity:0.6;}50%{opacity:1;}
+@keyframes blink{
+  0%,100%{border-color:var(--accent);}
+  50%{border-color:transparent;}
+}
+.typewriter{
+  border-right:2px solid var(--accent);
+  animation:blink 0.8s step-end infinite;
+  display:inline-block;
+  min-height:1em;
 }
 .fade-up{
-  opacity:0;animation:fadeUp .7s ease forwards;
+  opacity:0;
+  animation:fadeUp .7s ease forwards;
 }
 .delay-1{
   animation-delay:.1s;
@@ -866,13 +830,6 @@ footer{
 .delay-2{
   animation-delay:.2s;
 }
-.delay-3{
-  animation-delay:.3s;
-}
-.delay-4{
-  animation-delay:.4s;
-}
-
 @media(max-width:900px){
   nav{
     padding:16px 24px;
@@ -900,8 +857,12 @@ footer{
   .hero-ctas{
     justify-content:center;
   }
-  .about-grid,.skills-wrap,.projects-grid,.certs-grid,.ach-row{
+  .about-grid,.skills-wrap,.projects-grid,.certs-grid{
     grid-template-columns:1fr;
+  }
+  .ach-row{
+    flex-direction:column;
+    align-items:center;
   }
   .edu-item{
     grid-template-columns:100px 1px 1fr;
@@ -923,9 +884,7 @@ footer{
 </style>
 </head>
 <body>
-
 <canvas id="bg-canvas"></canvas>
-
 <nav>
   <a href="#hero" class="logo" style="text-decoration:none;color:inherit;">Sreya<span>.</span></a>
   <ul>
@@ -940,17 +899,12 @@ footer{
   </div>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="wrap">
     <div class="hero-inner">
       <div class="hero-left fade-up">
         <div class="eyebrow">Available for opportunities</div>
-        <h1 class="big">
-          Sreya<br>
-          <span class="line2">Shinu</span><br>
-          <em>UI/UX</em> & Front End
-        </h1>
+        <h1 class="big">Sreya<br><span class="line2">Shinu</span><br><em><span class="typewriter" id="typewriter"></span></em></h1>
         <p class="hero-desc">B.Tech IT student at Dr. N.G.P building intuitive digital products — from Figma prototypes to interactive interfaces.</p>
         <div class="hero-ctas">
           <a href="#projects" class="btn-primary">View Projects →</a>
@@ -971,7 +925,6 @@ footer{
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="wrap">
     <div class="about-grid">
@@ -990,7 +943,6 @@ footer{
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="wrap">
     <div class="section-label" style="text-align:center">Skills</div>
@@ -998,26 +950,11 @@ footer{
     <div class="skills-wrap">
       <div>
         <div style="font-size:13px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:24px;">Technical Proficiency</div>
-        <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">Figma / UI/UX</span><span class="skill-pct">95%</span></div>
-          <div class="skill-track"><div class="skill-bar" style="width:95%;background:linear-gradient(90deg,#ff6584,#f9a8d4);"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">HTML</span><span class="skill-pct">90%</span></div>
-          <div class="skill-track"><div class="skill-bar" style="width:90%;background:linear-gradient(90deg,#6c63ff,#a78bfa);"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">CSS</span><span class="skill-pct">85%</span></div>
-          <div class="skill-track"><div class="skill-bar" style="width:85%;background:linear-gradient(90deg,#6c63ff,#a78bfa);"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">JavaScript</span><span class="skill-pct">75%</span></div>
-          <div class="skill-track"><div class="skill-bar" style="width:75%;background:linear-gradient(90deg,#43e97b,#6ee7b7);"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">Java</span><span class="skill-pct">70%</span></div>
-          <div class="skill-track"><div class="skill-bar" style="width:70%;background:linear-gradient(90deg,#43e97b,#6ee7b7);"></div></div>
-        </div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Figma / UI/UX</span><span class="skill-pct">95%</span></div><div class="skill-track"><div class="skill-bar" style="width:95%;background:linear-gradient(90deg,#ff6584,#f9a8d4);"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">HTML</span><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-bar" style="width:90%;background:linear-gradient(90deg,#6c63ff,#a78bfa);"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">CSS</span><span class="skill-pct">85%</span></div><div class="skill-track"><div class="skill-bar" style="width:85%;background:linear-gradient(90deg,#6c63ff,#a78bfa);"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">JavaScript</span><span class="skill-pct">75%</span></div><div class="skill-track"><div class="skill-bar" style="width:75%;background:linear-gradient(90deg,#43e97b,#6ee7b7);"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Java</span><span class="skill-pct">70%</span></div><div class="skill-track"><div class="skill-bar" style="width:70%;background:linear-gradient(90deg,#43e97b,#6ee7b7);"></div></div></div>
       </div>
       <div>
         <div style="font-size:13px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:24px;">Tools & Technologies</div>
@@ -1029,59 +966,47 @@ footer{
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="wrap">
     <div class="section-label">Projects</div>
     <h2 class="section-h" style="margin-bottom:40px;">Things I've built</h2>
     <div class="projects-grid">
-
-      <div class="proj-card" onclick="window.open('https://github.com/sreya/Smart-Sewage-Monitoring-System')">
+      <div class="proj-card" onclick="window.open('https://github.com/SreyaShinu-21/Smart-Sewage-Monitoring-System','_blank')" style="cursor:pointer;">
         <div class="proj-type">Mini Project</div>
         <h3>Smart Sewage Monitoring System</h3>
         <p>Real-time monitoring of water level, pH, gas concentration, temperature and humidity. Cloud alerts for abnormal conditions via ThingSpeak and GSM.</p>
-        <div class="proj-techs">
-          <span class="proj-tech">Arduino Uno</span><span class="proj-tech">C/C++</span><span class="proj-tech">IoT</span><span class="proj-tech">ThingSpeak</span><span class="proj-tech">ESP8266</span>
-        </div>
+        <div class="proj-techs"><span class="proj-tech">Arduino Uno</span><span class="proj-tech">C/C++</span><span class="proj-tech">IoT</span><span class="proj-tech">ThingSpeak</span><span class="proj-tech">ESP8266</span></div>
+        <span class="cert-badge" style="background:rgba(108,99,255,0.1);color:#6c63ff;margin-top:16px;display:inline-block;position:relative;z-index:1;">View on GitHub ↗</span>
         <div class="proj-num">01</div>
       </div>
-      
-      <div class="proj-card" onclick="window.open('https://github.com/SreyaShinu-21/Real-Time-Driver-Drowsiness-Detection', '_blank')" style="cursor:pointer;">
-      <div class="proj-type">Mini Project</div>
-      <h3>Real-Time Driver Drowsiness Detection</h3>
-      <p>Computer vision system monitoring eye movements to detect driver fatigue, triggering real-time alerts to prevent road accidents.</p>
-      <div class="proj-techs">
-        <span class="proj-tech">Python</span><span class="proj-tech">OpenCV</span><span class="proj-tech">MediaPipe</span><span class="proj-tech">Flask</span>
+      <div class="proj-card" onclick="window.open('https://github.com/SreyaShinu-21/Real-Time-Driver-Drowsiness-Detection','_blank')" style="cursor:pointer;">
+        <div class="proj-type">Mini Project</div>
+        <h3>Real-Time Driver Drowsiness Detection</h3>
+        <p>Computer vision system monitoring eye movements to detect driver fatigue, triggering real-time alerts to prevent road accidents.</p>
+        <div class="proj-techs"><span class="proj-tech">Python</span><span class="proj-tech">OpenCV</span><span class="proj-tech">MediaPipe</span><span class="proj-tech">Flask</span></div>
+        <span class="cert-badge" style="background:rgba(108,99,255,0.1);color:#6c63ff;margin-top:16px;display:inline-block;position:relative;z-index:1;">View on GitHub ↗</span>
+        <div class="proj-num">02</div>
       </div>
-      <span class="cert-badge" style="background:rgba(108,99,255,0.1);color:#6c63ff;margin-top:16px;display:inline-block;position:relative;z-index:1;">View on GitHub ↗</span>
-      <div class="proj-num">02</div>
-    </div>
-      <div class="proj-card" onclick="window.open('https://github.com/SreyaShinu-21/Smart-Waste-Segregation-System', '_blank')" style="cursor:pointer;">
+      <div class="proj-card" onclick="window.open('https://github.com/SreyaShinu-21/Smart-Waste-Segregation-System','_blank')" style="cursor:pointer;">
         <div class="proj-type">STEM Project</div>
         <h3>Smart Waste Segregation System</h3>
         <p>Automated wet/dry waste separation with sensor-based bin level monitoring and SMS notifications for timely waste collection.</p>
-        <div class="proj-techs">
-          <span class="proj-tech">Arduino</span><span class="proj-tech">Moisture Sensor</span><span class="proj-tech">Ultrasonic</span><span class="proj-tech">GSM</span>
-        </div>
+        <div class="proj-techs"><span class="proj-tech">Arduino</span><span class="proj-tech">Moisture Sensor</span><span class="proj-tech">Ultrasonic</span><span class="proj-tech">GSM</span></div>
+        <span class="cert-badge" style="background:rgba(108,99,255,0.1);color:#6c63ff;margin-top:16px;display:inline-block;position:relative;z-index:1;">View on GitHub ↗</span>
         <div class="proj-num">03</div>
       </div>
-
-      <div class="proj-card" onclick="window.open('https://github.com/SreyaShinu-21/Netflix-UI-Design', '_blank')" style="cursor:pointer;">
+      <div class="proj-card" onclick="window.open('https://github.com/SreyaShinu-21/Netflix-UI-Design','_blank')" style="cursor:pointer;">
         <div class="proj-type">Internship Project</div>
         <h3>Netflix-Inspired Mobile App Prototype</h3>
         <p>High-fidelity Figma prototype with full interactive user flows. Focused on intuitive navigation and consistent visual design across all screens.</p>
-        <div class="proj-techs">
-          <span class="proj-tech">Figma</span><span class="proj-tech">Prototyping</span><span class="proj-tech">UI/UX</span>
-        </div>
+        <div class="proj-techs"><span class="proj-tech">Figma</span><span class="proj-tech">Prototyping</span><span class="proj-tech">UI/UX</span></div>
         <span class="cert-badge" style="background:rgba(108,99,255,0.1);color:#6c63ff;margin-top:16px;display:inline-block;position:relative;z-index:1;">View on GitHub ↗</span>
         <div class="proj-num">04</div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- INTERNSHIP -->
 <section id="internship">
   <div class="wrap">
     <div class="section-label" style="margin-bottom:40px;">Experience</div>
@@ -1090,6 +1015,20 @@ footer{
         <h3>UI/UX Design Intern</h3>
         <div class="intern-company">App Innovation Technologies Private Limited</div>
         <p>Created wireframes, user flows, and high-fidelity prototypes using Figma. Designed a Netflix-inspired mobile application focusing on user experience, visual consistency, and intuitive navigation — gaining real industry design workflow experience.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;">
+          <a href="https://www.figma.com/design/tGyR3Kr1VZbUQ6kHokIqu0/Netflix?node-id=0-1&p=f&t=dq7798rvfxQCpS3x-0" target="_blank"
+             style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:8px;background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.3);color:#6c63ff;text-decoration:none;font-size:14px;font-weight:600;transition:.3s;"
+             onmouseover="this.style.background='rgba(108,99,255,0.2)'" onmouseout="this.style.background='rgba(108,99,255,0.1)'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6c63ff" stroke-width="2"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 0 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>
+            View Figma ↗
+          </a>
+          <a href="https://www.figma.com/proto/tGyR3Kr1VZbUQ6kHokIqu0/Netflix?node-id=24-39&p=f&t=xEb2ZOj30Qa51nyz-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=24%3A39" target="_blank"
+             style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:8px;background:rgba(255,101,132,0.1);border:1px solid rgba(255,101,132,0.3);color:#ff6584;text-decoration:none;font-size:14px;font-weight:600;transition:.3s;"
+             onmouseover="this.style.background='rgba(255,101,132,0.2)'" onmouseout="this.style.background='rgba(255,101,132,0.1)'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6584" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            View Prototype ↗
+          </a>
+        </div>
       </div>
       <div class="intern-badge">
         <div class="intern-badge-icon">🎨</div>
@@ -1100,38 +1039,37 @@ footer{
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
 <section id="certifications">
   <div class="wrap">
     <div class="section-label">Certifications</div>
     <h2 class="section-h" style="margin-bottom:40px;">Credentials</h2>
     <div class="certs-grid">
-      <div class="cert-card" onclick="window.open('https://www.linkedin.com/posts/sreyashinu_nptel-hci-elitecertification-activity-7461409145234038784-oz7R?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYQB50BpsY3rcM5B5DhX5ouW8QEJqi6RyU', '_blank')" style="cursor: pointer;">
+      <div class="cert-card" onclick="window.open('https://www.linkedin.com/posts/sreyashinu_nptel-hci-elitecertification-activity-7461409145234038784-oz7R?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYQB50BpsY3rcM5B5DhX5ouW8QEJqi6RyU','_blank')" style="cursor:pointer;">
         <div class="cert-icon-wrap" style="background:rgba(255,215,0,0.1);">🏅</div>
         <h4>NPTEL — Human Computer Interaction</h4>
         <p>Human-centered design principles and HCI methodologies.</p>
         <span class="cert-badge" style="background:rgba(255,215,0,0.12);color:#ffd700;">Elite + Gold</span>
         <span class="cert-badge" style="background:rgba(255,101,132,0.1);color:#ff6584;">View on LinkedIn ↗</span>
       </div>
-      <div class="cert-card" onclick="window.open('https://www.linkedin.com/posts/sreyashinu_nptel-industry40-iiot-activity-7461409145234038784-oz7R?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYQB50BpsY3rcM5B5DhX5ouW8QEJqi6RyU', '_blank')" style="cursor: pointer;">
+      <div class="cert-card" onclick="window.open('https://www.linkedin.com/posts/sreyashinu_nptel-industry40-iiot-activity-7461409145234038784-oz7R?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYQB50BpsY3rcM5B5DhX5ouW8QEJqi6RyU','_blank')" style="cursor:pointer;">
         <div class="cert-icon-wrap" style="background:rgba(108,99,255,0.1);">⚙️</div>
         <h4>NPTEL — Industry 4.0 & IIoT</h4>
         <p>Industrial Internet of Things and smart manufacturing systems.</p>
         <span class="cert-badge" style="background:rgba(255,101,132,0.1);color:#ff6584;">View on LinkedIn ↗</span>
       </div>
-      <div class="cert-card" onclick="window.open('https://www.linkedin.com/posts/sreyashinu_linkedinlearning-activity-7461409145234038784-oz7R?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYQB50BpsY3rcM5B5DhX5ouW8QEJqi6RyU', '_blank')" style="cursor: pointer;">
+      <div class="cert-card" onclick="window.open('https://www.linkedin.com/posts/sreyashinu_linkedinlearning-activity-7461409145234038784-oz7R?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYQB50BpsY3rcM5B5DhX5ouW8QEJqi6RyU','_blank')" style="cursor:pointer;">
         <div class="cert-icon-wrap" style="background:rgba(67,233,123,0.1);">🔗</div>
         <h4>LinkedIn Learning</h4>
         <p>HTML, CSS, MySQL, MongoDB, Figma, Canva, Project Management.</p>
         <span class="cert-badge" style="background:rgba(255,101,132,0.1);color:#ff6584;">View on LinkedIn ↗</span>
       </div>
-      <div class="cert-card" onclick="window.open('https://www.linkedin.com/posts/sreyashinu_cybersecurity-skilldevelopment-isea-activity-7415073453898313728--lpv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYQB50BpsY3rcM5B5DhX5ouW8QEJqi6RyU', '_blank')" style="cursor:pointer;">
+      <div class="cert-card" onclick="window.open('https://www.linkedin.com/posts/sreyashinu_cybersecurity-skilldevelopment-isea-activity-7415073453898313728--lpv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYQB50BpsY3rcM5B5DhX5ouW8QEJqi6RyU','_blank')" style="cursor:pointer;">
         <div class="cert-icon-wrap" style="background:rgba(255,101,132,0.1);">🔒</div>
-          <h4>Foundations of Cyber Security</h4>
-          <p>Threats, tools & practical defence — ISEA Project Phase-III.</p>
-          <span class="cert-badge" style="background:rgba(255,101,132,0.1);color:#ff6584;">View on LinkedIn ↗</span>
-        </div>
-      <div class="cert-card" onclick="window.open('https://www.linkedin.com/posts/sreyashinu_internshipexperience-uiuxinternship-designlearning-activity-7344660562355621888-3hae?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYQB50BpsY3rcM5B5DhX5ouW8QEJqi6RyU', '_blank')" style="cursor:pointer;">
+        <h4>Foundations of Cyber Security</h4>
+        <p>Threats, tools & practical defence — ISEA Project Phase-III.</p>
+        <span class="cert-badge" style="background:rgba(255,101,132,0.1);color:#ff6584;">View on LinkedIn ↗</span>
+      </div>
+      <div class="cert-card" onclick="window.open('https://www.linkedin.com/posts/sreyashinu_internshipexperience-uiuxinternship-designlearning-activity-7344660562355621888-3hae?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYQB50BpsY3rcM5B5DhX5ouW8QEJqi6RyU','_blank')" style="cursor:pointer;">
         <div class="cert-icon-wrap" style="background:rgba(108,99,255,0.1);">🎨</div>
         <h4>UI/UX Design Internship Certificate</h4>
         <p>Issued by App Innovation Technologies Private Limited.</p>
@@ -1141,29 +1079,27 @@ footer{
   </div>
 </section>
 
-<!-- ACHIEVEMENTS -->
 <section id="achievements">
   <div class="wrap">
     <div class="section-label">Achievements</div>
     <h2 class="section-h" style="margin-bottom:40px;">Awards & Recognition</h2>
-    <div class="ach-row" style="display:flex;justify-content:center;gap:24px;">
-  <div class="ach-card gold" style="width:320px;">
-    <span class="ach-medal-big">🏅</span>
-    <div class="ach-rank">First Prize</div>
-    <h4>Paper Presentation</h4>
-    <p>Technovate'25 — Government College of Technology (GCT)</p>
-  </div>
-  <div class="ach-card silver" style="width:320px;">
-    <span class="ach-medal-big">🏅</span>
-    <div class="ach-rank">Second Prize</div>
-    <h4>Competitive Programming</h4>
-    <p>Technovate'25 — Government College of Technology (GCT)</p>
-  </div>
-</div>
+    <div class="ach-row">
+      <div class="ach-card gold">
+        <span class="ach-medal-big">🥇</span>
+        <div class="ach-rank">First Prize</div>
+        <h4>Paper Presentation</h4>
+        <p>Technovate'25 — Government College of Technology (GCT)</p>
+      </div>
+      <div class="ach-card silver">
+        <span class="ach-medal-big">🥈</span>
+        <div class="ach-rank">Second Prize</div>
+        <h4>Competitive Programming</h4>
+        <p>Technovate'25 — Government College of Technology (GCT)</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- EDUCATION -->
 <section id="education">
   <div class="wrap">
     <div class="section-label">Education</div>
@@ -1172,35 +1108,22 @@ footer{
       <div class="edu-item">
         <div class="edu-year"><span class="edu-year-text">2023 – Present</span></div>
         <div class="edu-line"><div class="edu-dot"></div></div>
-        <div class="edu-body">
-          <h3>Dr. N.G.P Institute of Technology</h3>
-          <div class="deg">B.Tech Information Technology · Anna University</div>
-          <span class="edu-score-pill">CGPA: 7.93</span>
-        </div>
+        <div class="edu-body"><h3>Dr. N.G.P Institute of Technology</h3><div class="deg">B.Tech Information Technology · Anna University</div><span class="edu-score-pill">CGPA: 7.93</span></div>
       </div>
       <div class="edu-item">
         <div class="edu-year"><span class="edu-year-text">2021 – 2023</span></div>
         <div class="edu-line"><div class="edu-dot"></div></div>
-        <div class="edu-body">
-          <h3>Chothavoor Higher Secondary School</h3>
-          <div class="deg">Higher Secondary · State Board</div>
-          <span class="edu-score-pill">82%</span>
-        </div>
+        <div class="edu-body"><h3>Chothavoor Higher Secondary School</h3><div class="deg">Higher Secondary · State Board</div><span class="edu-score-pill">82%</span></div>
       </div>
       <div class="edu-item">
         <div class="edu-year"><span class="edu-year-text">2018 – 2021</span></div>
         <div class="edu-line"><div class="edu-dot"></div></div>
-        <div class="edu-body">
-          <h3>Rajeev Gandhi Memorial High School</h3>
-          <div class="deg">SSLC · State Board</div>
-          <span class="edu-score-pill">95%</span>
-        </div>
+        <div class="edu-body"><h3>Rajeev Gandhi Memorial High School</h3><div class="deg">SSLC · State Board</div><span class="edu-score-pill">95%</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="wrap">
     <div class="contact-inner">
@@ -1209,26 +1132,10 @@ footer{
       <p>Open to internships, freelance projects, and full-time opportunities in UI/UX Design or Front-End Development.</p>
     </div>
     <div class="contact-cards">
-      <a href="mailto:sreyashinu45@gmail.com" class="contact-card">
-        <div class="c-icon">📧</div>
-        <div class="c-label">Email</div>
-        <div class="c-val">sreyashinu45@gmail.com</div>
-      </a>
-      <a href="tel:+916380157319" class="contact-card">
-        <div class="c-icon">📱</div>
-        <div class="c-label">Phone</div>
-        <div class="c-val">+91 6380157319</div>
-      </a>
-      <a href="https://github.com/SreyaShinu-21" target="_blank" class="contact-card">
-        <div class="c-icon">💻</div>
-        <div class="c-label">GitHub</div>
-        <div class="c-val">SreyaShinu-21</div>
-      </a>
-      <a href="https://linkedin.com/in/sreyashinu" target="_blank" class="contact-card">
-        <div class="c-icon">🔗</div>
-        <div class="c-label">LinkedIn</div>
-        <div class="c-val">sreyashinu</div>
-      </a>
+      <a href="mailto:sreyashinu45@gmail.com" class="contact-card"><div class="c-icon">📧</div><div class="c-label">Email</div><div class="c-val">sreyashinu45@gmail.com</div></a>
+      <a href="tel:+916380157319" class="contact-card"><div class="c-icon">📱</div><div class="c-label">Phone</div><div class="c-val">+91 6380157319</div></a>
+      <a href="https://github.com/SreyaShinu-21" target="_blank" class="contact-card"><div class="c-icon">💻</div><div class="c-label">GitHub</div><div class="c-val">SreyaShinu-21</div></a>
+      <a href="https://linkedin.com/in/sreyashinu" target="_blank" class="contact-card"><div class="c-icon">🔗</div><div class="c-label">LinkedIn</div><div class="c-val">sreyashinu</div></a>
     </div>
   </div>
 </section>
@@ -1236,96 +1143,42 @@ footer{
 <footer>© 2026 Sreya Shinu · Designed & Built with ❤️</footer>
 
 <script>
-// Animated particle canvas background
 const canvas = document.getElementById('bg-canvas');
 const ctx = canvas.getContext('2d');
 let W, H, particles = [];
-
-function resize() {
-  W = canvas.width = window.innerWidth;
-  H = canvas.height = window.innerHeight;
+function resize(){ W=canvas.width=window.innerWidth; H=canvas.height=window.innerHeight; }
+resize(); window.addEventListener('resize',resize);
+class Particle{
+  constructor(){this.reset();}
+  reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.r=Math.random()*1.5+0.3;this.vx=(Math.random()-0.5)*0.3;this.vy=(Math.random()-0.5)*0.3;this.alpha=Math.random()*0.5+0.1;this.color=Math.random()>0.6?'#6c63ff':Math.random()>0.5?'#ff6584':'#43e97b';}
+  update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset();}
+  draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=this.color;ctx.globalAlpha=this.alpha;ctx.fill();}
 }
-resize();
-window.addEventListener('resize', resize);
-
-class Particle {
-  constructor() { this.reset(); }
-  reset() {
-    this.x = Math.random() * W;
-    this.y = Math.random() * H;
-    this.r = Math.random() * 1.5 + 0.3;
-    this.vx = (Math.random() - 0.5) * 0.3;
-    this.vy = (Math.random() - 0.5) * 0.3;
-    this.alpha = Math.random() * 0.5 + 0.1;
-    this.color = Math.random() > 0.6 ? '#6c63ff' : Math.random() > 0.5 ? '#ff6584' : '#43e97b';
-  }
-  update() {
-    this.x += this.vx; this.y += this.vy;
-    if (this.x < 0 || this.x > W || this.y < 0 || this.y > H) this.reset();
-  }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-    ctx.fillStyle = this.color;
-    ctx.globalAlpha = this.alpha;
-    ctx.fill();
-  }
-}
-
-for (let i = 0; i < 120; i++) particles.push(new Particle());
-
-// Draw connection lines
-function drawConnections() {
-  for (let i = 0; i < particles.length; i++) {
-    for (let j = i + 1; j < particles.length; j++) {
-      const dx = particles[i].x - particles[j].x;
-      const dy = particles[i].y - particles[j].y;
-      const dist = Math.sqrt(dx*dx + dy*dy);
-      if (dist < 100) {
-        ctx.beginPath();
-        ctx.moveTo(particles[i].x, particles[i].y);
-        ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = '#6c63ff';
-        ctx.globalAlpha = (1 - dist/100) * 0.08;
-        ctx.lineWidth = 0.5;
-        ctx.stroke();
-      }
-    }
-  }
-}
-function animate() {
-  ctx.clearRect(0, 0, W, H);
-  particles.forEach(p => { p.update(); p.draw(); });
-  drawConnections();
-  ctx.globalAlpha = 1;
-  requestAnimationFrame(animate);
-}
+for(let i=0;i<120;i++) particles.push(new Particle());
+function drawConnections(){for(let i=0;i<particles.length;i++){for(let j=i+1;j<particles.length;j++){const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<100){ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle='#6c63ff';ctx.globalAlpha=(1-dist/100)*0.08;ctx.lineWidth=0.5;ctx.stroke();}}}}
+function animate(){ctx.clearRect(0,0,W,H);particles.forEach(p=>{p.update();p.draw();});drawConnections();ctx.globalAlpha=1;requestAnimationFrame(animate);}
 animate();
 
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.style.opacity = '1';
-      e.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.1 });
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:0.1});
+document.querySelectorAll('.proj-card,.cert-card,.ach-card,.info-card,.edu-item').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(24px)';el.style.transition='opacity .6s ease, transform .6s ease';observer.observe(el);});
 
-document.querySelectorAll('.proj-card,.cert-card,.ach-card,.info-card,.edu-item').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity .6s ease, transform .6s ease';
-  observer.observe(el);
-});
+const themeBtn=document.getElementById('themeBtn');
+themeBtn.addEventListener('click',()=>{document.body.classList.toggle('light');themeBtn.textContent=document.body.classList.contains('light')?'☀️':'🌙';});
 
-// Theme toggle
-const themeBtn = document.getElementById('themeBtn');
-themeBtn.addEventListener('click', () => {
-  document.body.classList.toggle('light');
-  const isLight = document.body.classList.contains('light');
-  themeBtn.textContent = isLight ? '☀️' : '🌙';
-});
+// Typewriter
+const words=['UI/UX Designer','Front End Developer'];
+let wordIndex=0,charIndex=0,isDeleting=false;
+const tw=document.getElementById('typewriter');
+function type(){
+  const current=words[wordIndex];
+  tw.textContent=isDeleting?current.substring(0,charIndex-1):current.substring(0,charIndex+1);
+  isDeleting?charIndex--:charIndex++;
+  let speed=isDeleting?60:100;
+  if(!isDeleting&&charIndex===current.length){speed=1500;isDeleting=true;}
+  else if(isDeleting&&charIndex===0){isDeleting=false;wordIndex=(wordIndex+1)%words.length;speed=400;}
+  setTimeout(type,speed);
+}
+type();
 </script>
 </body>
 </html>
